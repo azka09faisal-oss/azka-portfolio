@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+/* Design tokens from the Figma file (no Figma variables existed, so these are raw values). */
+@theme {
+  --color-cream: #fdf8dd;
+  --color-sky: #a7e6ff;
+  --color-blush: #fedeed;
+  --color-lavender: #e6d9ff;
+  --color-ink: #000000;
+
+  /* Fluid type: each caps at the Figma desktop size (1730px canvas). */
+ --text-body: clamp(1rem, 0.6rem + 1.2vw, 1.875rem);      /* 30, was 40 */
+--text-sub: clamp(1.125rem, 0.6rem + 1.7vw, 2.375rem);   /* 38, was 50 */
+--text-title: clamp(1.375rem, 0.6rem + 2.3vw, 2.8125rem); /* 45, was 60 */
+--text-heading: clamp(2rem, 0.9rem + 3.2vw, 3.4375rem);  /* 55, was 70 */
+--text-display: clamp(2.25rem, 0.9rem + 4vw, 4.6875rem); /* 75, was 100 */}
+
+@theme inline {
+  --font-sans: var(--font-instrument), ui-sans-serif, system-ui, sans-serif;
+  --font-script: var(--font-bad-script), cursive;
+}
+
+@utility bg-hero {
+  background-image: linear-gradient(to bottom, var(--color-sky), var(--color-blush) 86%);
+}
+@utility bg-about {
+  background-image: linear-gradient(to bottom, var(--color-blush) 60%, var(--color-lavender));
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 8rem;
+  }
+  body {
+    line-height: normal;
+  }
+  a:focus-visible {
+    outline: 3px solid var(--color-ink);
+    outline-offset: 4px;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+}
