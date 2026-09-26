@@ -10,24 +10,11 @@ const EMAIL_URL = "mailto:hello@example.com";
 const projects: Project[] = [
   {
     title: "Mentorship Service",
-    subtitle: "Internship Project",
-    description: "Streamlining Ummah Professionals’ process for providing students with career mentorship",
-    href: "#", // TODO
-    art: { src: "/assets/heart-blue.svg", width: 417, height: 345, className: "rotate-[-5.43deg]" },
-  },
-  {
-    title: "EcoTracker",
-    subtitle: "Class Project",
-    description: "UX Design Project about Sustainability Goal Tracking",
-    href: "#", // TODO
-    art: { src: "/assets/heart-green.svg", width: 433, height: 363 },
-  },
-  {
-    title: "LinkTheLocal",
-    subtitle: "Design Jam Project",
-    description: "Product Design project helping college students gain experience for the job market",
-    href: "#", // TODO
-    art: { src: "/assets/heart-red.svg", width: 388, height: 339, className: "rotate-[-12.45deg]" },
+    subtitle: "Internship Project · May 2026 – August 2026",
+    description:
+      "Helping a non-profit career prep service for Muslim professionals revamp and streamline their mentorship service. Compiled user research and created a high-fidelity Figma prototype that was then developed into a deployed AWS app.",
+    href: "/projects/mentorship-service",
+    art: { src: "/assets/mentorship-mockup.png", width: 415, height: 509 },
   },
 ];
 
@@ -57,7 +44,7 @@ export default function Home() {
             </p>
           </div>
           <p className="relative mx-auto mt-[clamp(1rem,3.4vw,3.6rem)] max-w-[745px]">
-            Making an impact on people’s lives through intuitive design.
+            HCI @ NJIT making an impact on people’s lives through intuitive design.
             <br />
             Learn more about me or my projects below!
           </p>
@@ -99,8 +86,8 @@ export default function Home() {
         <div className="mx-auto flex max-w-[1600px] flex-col items-center gap-6 text-center md:flex-row md:justify-between md:text-left">
           <p>Thanks for stopping by, let’s keep in touch!</p>
           <nav aria-label="Social" className="flex gap-[clamp(1.5rem,4vw,5rem)]">
-            <SocialLink href="https://www.linkedin.com/in/azka-faisal/" label="LinkedIn" />
-            <SocialLink href="mailto:af594@njit.edu" label="Email" />
+            <SocialLink href={LINKEDIN_URL} label="LinkedIn" />
+            <SocialLink href={EMAIL_URL} label="Email" />
           </nav>
         </div>
       </footer>

@@ -2,9 +2,9 @@ import { Fragment } from "react";
 import { Star } from "./ui";
 
 const links = [
-  { href: "#home", label: "Home" },
-  { href: "#projects", label: "Projects" },
-  { href: "#about", label: "About" },
+  { href: "/#home", label: "Home" },
+  { href: "/#projects", label: "Projects" },
+  { href: "/#about", label: "About" },
 ];
 
 export default function NavBar() {
